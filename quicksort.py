@@ -15,13 +15,13 @@ def quick_sort(values: list[int]) -> list[int]:
     for value in values[1:]:
         if value < pivot:
             left.append(value)
-        else:
+        elif value > pivot:
             right.append(value)
 
     return quick_sort(left) + [pivot] + quick_sort(right)
 
 
 if __name__ == "__main__":
-    demo_values = [8, 3, 5, 1, 9, 2, 7, 4, 6]
+    demo_values = [8, 3, 5, 1, 9, 2, 7, 4, 6, 3, 8]
     print("before:", demo_values)
     print("after: ", quick_sort(demo_values))
